@@ -26,7 +26,7 @@ public class KeyWordEngine {
 	public Base base;
 	public WebElement element;
 
-	public final String SCENARIO_SHEET_PATH = "D:\\Bridgelabz Program\\TestingAPI\\KeyboardDrivenFW\\src\\main\\java\\com\\qa\\fb\\keyword\\scenerios\\KeywordDrivenData.xlsx";
+	public final String SCENARIO_SHEET_PATH = "D:\\Bridgelabz Program\\TestingAPI\\KeywordDrivenFW\\src\\main\\java\\com\\qa\\fb\\keyword\\scenerios\\KeywordDrivenData.xlsx";
 
 	public void startExecution(String sheetName) {
 
@@ -74,9 +74,9 @@ public class KeyWordEngine {
 					}
 					break;
 
-				case "quit":
-					driver.quit();
-					break;
+//				case "quit":
+//					driver.quit();
+//					break;
 				default:
 					break;
 				}
@@ -89,6 +89,7 @@ public class KeyWordEngine {
 						element.sendKeys(value);
 					} else if (action.equalsIgnoreCase("click")) {
 						element.click();
+						element.sendKeys(value);
 					} else if (action.equalsIgnoreCase("isDisplayed")) {
 						element.isDisplayed();
 					} else if (action.equalsIgnoreCase("getText")) {

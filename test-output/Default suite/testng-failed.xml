@@ -5,7 +5,7 @@
     <classes>
       <class name="com.qa.fb.keyword.Test.LoginTest">
         <methods>
-          <include name="signUpTest"/>
+          <include name="loginTest"/>
         </methods>
       </class> <!-- com.qa.fb.keyword.Test.LoginTest -->
     </classes>
