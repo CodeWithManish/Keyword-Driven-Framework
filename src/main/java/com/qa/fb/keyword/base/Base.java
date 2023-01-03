@@ -18,8 +18,7 @@ public class Base {
 	
 	public WebDriver init_driver(String browserName)  {
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\kmani\\Downloads\\chromedriver_win32\\chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver",".//Drivers//chromedriver.exe");	
 			if(prop.getProperty("headless").equals("yes")) {
 			   ChromeOptions options = new ChromeOptions();
 			   options.addArguments("--headless");
@@ -31,8 +30,8 @@ public class Base {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(Utility.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(Utility.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		//driver.manage().timeouts().pageLoadTimeout(Utility.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(Utility.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		return driver;
 	}
 	
